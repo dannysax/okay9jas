@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-3&b(%#u_48dyxg&i4^w3_5a^pmeptq1!k74u&_qlvi8!emz_b5
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '127.0.0.1', 'localhost', 'okay9jas.herokuapp.com/'
+    '127.0.0.1', 'localhost', 'okay9jas.herokuapp.com'
 ]
 
 # Application definition
@@ -108,6 +108,11 @@ DATABASES = {
     }
 }
 """
+
+'''import dj_database_url
+
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+'''
 
 
 # Password validation
