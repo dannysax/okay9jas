@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 
 
 
 function SearchBox(){
 
-    let history = useHistory()
+    let history = useHistory
+    //let history = useNavigate
 
     const[keyword, setKeyword] = useState('')
 

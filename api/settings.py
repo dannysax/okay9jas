@@ -90,11 +90,11 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         #'NAME': BASE_DIR / 'db.sqlite3',
-        'NAME' : '9jaok',
-        'USER' : 'postgres',
+        'NAME' : 'dorathy',
+        'USER' : 'dorathy',
         #'PASSWORD' : os.environ.get('DB_PASSWORD'),
         'PASSWORD' : 'Everest12#',
-        'HOST' : 'localhost',
+        'HOST' : 'dorababe.cavkc1k3hhvm.us-east-1.rds.amazonaws.com',
         'PORT' : '5432'
         
     }
@@ -109,10 +109,7 @@ DATABASES = {
 }
 """
 
-'''import dj_database_url
 
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
-'''
 
 
 # Password validation
@@ -159,7 +156,7 @@ STATIC_ROOT = 'staticfiles'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
-    os.path.join(BASE_DIR, "frontend/build/static")
+    os.path.join(BASE_DIR, "frontend/build/static"),
     #BASE_DIR / "static",
 
 ]
@@ -167,9 +164,10 @@ STATICFILES_DIRS = [
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 #STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
 #AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-AWS_ACCESS_KEY_ID = 'D7qe/fZ9BTjDNmKY6dFaQIAC9ZJW/sKVmBAJsK7v'
+AWS_SECRET_ACCESS_KEY = 'QLk9/mms1s2+12HhlUUwcjSdRy2kyUxzxpdqE5TI'
+AWS_ACCESS_KEY_ID = 'AKIASSVDYIVHZE6XIR6N'
 #AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-AWS_SECRET_ACCESS_KEY = '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'
+
 AWS_STORAGE_BUCKET_NAME = '9jaok-images'
 AWS_QUERYSTRING_AUTH = False
 

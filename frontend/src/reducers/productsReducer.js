@@ -2,6 +2,7 @@ import {
     PRODUCT_LIST_REQUEST,
     PRODUCT_LIST_SUCCESS,
     PRODUCT_LIST_FAIL,
+
     PRODUCT_DETAILS_REQUEST,
     PRODUCT_DETAILS_SUCCESS,
     PRODUCT_DETAILS_FAIL,
@@ -29,6 +30,7 @@ export const ProductListReducer = (state = {products: []}, action) => {
     switch(action.type){
         case PRODUCT_LIST_REQUEST:
             return {loading : true, products : []}
+
         case PRODUCT_LIST_SUCCESS:
             return {
                 loading:false, 
@@ -36,10 +38,14 @@ export const ProductListReducer = (state = {products: []}, action) => {
                 page:action.payload.page,
                 pages:action.payload.pages
             }
+
         case PRODUCT_LIST_FAIL:
-            return {loading:false, error:action.payload.products}
+            return {loading:false, 
+                error:action.payload.products
+            }
+
         default:
-        return state
+            return state
     }
 }
 

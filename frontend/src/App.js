@@ -1,5 +1,5 @@
 import HomeScreen from './screens/HomeScreen';
-import {BrowserRouter, HashRouter, Route} from 'react-router-dom';
+import { BrowserRouter, Route } from "react-router-dom";
 import ProductScreen from './screens/ProducScreen';
 import CartScreen from './screens/CartScreen';
 import Header from './components/Header';
@@ -20,7 +20,7 @@ import UsersListScreen from './screens/UsersListScreen';
 function App() {
   return (
     <div className="App">
-      <HashRouter>
+      <BrowserRouter>
       <Header />
       <main>
       <Container>
@@ -35,10 +35,11 @@ function App() {
       <Route exact path = "/placeorder/" component={PlaceOrderScreen} />
       <Route exact path = "/order/:id/" component={OrderScreen} />
       <Route exact path = "/users/" component={UsersListScreen} />
+
       </Container>
       </main>
       <Footer />
-      </HashRouter>
+    </BrowserRouter>
     
     </div>   
   );
